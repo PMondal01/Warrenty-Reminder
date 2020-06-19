@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/product_name_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product name">
+    </EditText>
+
+    <EditText
+        android:id="@+id/shop_name_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Shop Name"
+        android:layout_below="@id/product_name_alert">
+    </EditText>
+
+    <Button
+        android:id="@+id/save_btn_alert"
+        android:layout_width="wrap_content"
+        android:text="Save"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/shop_name_alert">
+    </Button>
+
+
+</RelativeLayout>

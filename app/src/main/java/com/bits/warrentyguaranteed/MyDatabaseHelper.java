@@ -47,11 +47,11 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public long  insertData(String name){
+    public long  insertData(String name,String shop_name){
         SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put(PRODUCT_NAME,name);
-       /* contentValues.put(SHOP_NAME,shop_name);*/
+        contentValues.put(SHOP_NAME,shop_name);
         long rowId= sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
         return  rowId;
     }
