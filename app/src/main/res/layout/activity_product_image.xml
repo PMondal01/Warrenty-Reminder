@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductImageActivity"
+    android:padding="40dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step 2 out of 3">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Capture your receipt and       warranty card"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@id/header"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            >
+        </TextView>
+        
+        <ImageView
+            android:id="@+id/camera_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/photo"
+            android:layout_below="@id/text"
+            android:layout_marginTop="25dp">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:layout_below="@id/text"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="25dp"
+            android:onClick="takePicture"
+            android:layout_toRightOf="@id/camera_image">
+        </Button>
+
+
+        <ImageView
+            android:id="@+id/import_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/pictures"
+            android:layout_below="@id/text"
+            android:layout_marginTop="25dp"
+           android:layout_toLeftOf="@id/camera_import">
+        </ImageView>
+
+        <Button
+            android:id="@+id/camera_import"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Import"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/text"
+            android:layout_marginRight="25dp"
+            >
+        </Button>
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/camera"
+            android:layout_marginTop="15dp">
+        </ImageView>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Next"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            >
+        </Button>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

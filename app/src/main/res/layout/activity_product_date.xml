@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDateActivity"
+    android:padding="40dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step 3 out of 3">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warrenty Details"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@id/header"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#000000">
+        </TextView>
+
+        <TextView
+            android:id="@+id/dateofpurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Purchase: "
+            android:layout_below="@id/text"
+            android:layout_marginTop="30dp"
+            android:textColor="#000000"
+            android:textStyle="bold">
+        </TextView>
+
+        <EditText
+            android:id="@+id/purchaseproductdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateofpurchase"
+            android:focusable="false"
+            android:backgroundTint="@color/colorPrimaryDark">
+        </EditText>
+
+        <TextView
+            android:id="@+id/warrentyperiod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Expiry: "
+            android:layout_below="@id/purchaseproductdate"
+            android:layout_marginTop="50dp"
+            android:textColor="#000000"
+            android:textStyle="bold">
+        </TextView>
+
+        <EditText
+            android:id="@+id/expirydate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/warrentyperiod"
+            android:focusable="false"
+            android:backgroundTint="@color/colorPrimaryDark"
+            >
+        </EditText>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+        </Button>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,14 +20,43 @@
         android:layout_below="@id/product_name_alert">
     </EditText>
 
+    <TextView
+        android:id="@+id/purchasedate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Purchase Date"
+        android:layout_below="@id/shop_name_alert"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+    </TextView>
+
+    <CalendarView
+        android:id="@+id/calender"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/purchasedate">
+    </CalendarView>
+
+    <EditText
+        android:id="@+id/warrenty_period_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Warrenty Valid for: 6 months "
+        android:layout_below="@id/calender"
+        android:gravity="center">
+    </EditText>
+
     <Button
         android:id="@+id/save_btn_alert"
         android:layout_width="wrap_content"
         android:text="Save"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/shop_name_alert">
+        android:layout_below="@id/warrenty_period_alert">
     </Button>
+
+
 
 
 </RelativeLayout>
