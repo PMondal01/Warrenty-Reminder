@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProductNameActivity"
-    android:padding="40dp">
+    android:padding="40dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,7 +41,6 @@
             android:backgroundTint="@color/colorPrimaryDark"
             android:hint="product name"
             android:textStyle="italic"
-            android:textColor="#7BE7F4"
             android:focusable="true"
             >
         </EditText>

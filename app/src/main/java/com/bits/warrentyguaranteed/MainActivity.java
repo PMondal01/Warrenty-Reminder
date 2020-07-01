@@ -19,12 +19,11 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.time.Month;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    MyDatabaseHelper myDatabaseHelper;
+    MySqliteDatabaseHelper myDatabaseHelper;
     private ListView product_Listview;
     private String selectedDate;
     @Override
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        myDatabaseHelper=new MyDatabaseHelper(this);
+        myDatabaseHelper=new MySqliteDatabaseHelper(this);
         product_Listview=findViewById(R.id.productlist_view);
         UpdateUI();
 
@@ -101,33 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-              /*  final EditText productEditText=new EditText(this);
-                final EditText shopnameEditText=new EditText(this);
-                AlertDialog dialog=new AlertDialog.Builder(this)
-                        .setTitle("New Product")
-                        .setMessage("Add a new product")
-                        .setView(productEditText)
-                       *//* .setMessage("Shop name")*//*
-                     *//*   .setView(shopnameEditText)*//*
-                        .setPositiveButton("Add",new DialogInterface.OnClickListener(){
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                String product_name=String.valueOf(productEditText.getText());
-                                *//*String shop_name=String.valueOf(shopnameEditText.getText());*//*
-                                long rowId= myDatabaseHelper.insertData(product_name);
-                                if(rowId>0){
-                                    Toast.makeText(getApplicationContext(),"Row "+rowId+" inserted",Toast.LENGTH_LONG).show();
-                                    myDatabaseHelper.close();
-                                    UpdateUI();
-                                }else {
-                                    Toast.makeText(getApplicationContext(),"Row insert failed",Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        } )
-                        .setNegativeButton("Cancel",null)
-                        .create();
-                        dialog.show();
-                        return true;*/
             default:
                         return super.onOptionsItemSelected(item);
         }
@@ -152,7 +124,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void DeleteTask(View view){
-
-    }
 }
